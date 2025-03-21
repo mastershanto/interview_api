@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:interview_api/taskmanager_project/presentation/ui/task_screens/add_new_tasks_screen.dart';
 import '../../state_holder/authentication_controller.dart';
 import '../../widgets/background.dart';
+import '../add_new_tasks_screen.dart';
 import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {

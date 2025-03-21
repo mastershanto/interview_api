@@ -7,14 +7,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:interview_api/login_and_signup/login_signup_app.dart';
 
 // import 'package:interview_api/main.dart';
-import 'package:interview_api/taskmanager_project/app_tm.dart';
+
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const TaskManagerApp());
+    await tester.pumpWidget(const LoginSignupApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

@@ -8,7 +8,7 @@ import '../../state_holder/update_profile_controller.dart';
 import '../../ui_utility/input_validations.dart';
 import '../../ui_utility/style.dart';
 import '../../widgets/background.dart';
-import '../../widgets/profile_summary_card.dart';
+import '../../widgets/profile_widgets/profile_summary_card.dart';
 import '../../widgets/snack_message.dart';
 
 class UpdateProfileScreen extends StatefulWidget {

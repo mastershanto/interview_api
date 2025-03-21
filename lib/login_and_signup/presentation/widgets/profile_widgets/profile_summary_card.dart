@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../presentation_utility/style.dart';
-import '../state_holder/authentication_controller.dart';
-import '../ui/profile_screens/login_screen.dart';
-import '../ui/profile_screens/update_profile_screen.dart';
+import '../../state_holder/authentication_controller.dart';
+import '../../ui/profile_screens/login_screen.dart';
+import '../../ui/profile_screens/update_profile_screen.dart';
+import '../../ui_utility/style.dart';
 
 
 class ProfileSummeryCard extends StatefulWidget {
@@ -68,6 +68,8 @@ class _ProfileSummeryCardState extends State<ProfileSummeryCard> {
       trailing: IconButton(
         onPressed: () async {
           await AuthenticationController.checkUserAuthState();
+          final SharedPreferences prefs =await SharedPreferences.getInstance();
+          await prefs.clear();
           if (mounted) {
             Navigator.pushAndRemoveUntil(
               context,
@@ -77,8 +79,7 @@ class _ProfileSummeryCardState extends State<ProfileSummeryCard> {
                   (route) => false,
             );
           }
-          final SharedPreferences prefs =await SharedPreferences.getInstance();
-          await prefs.clear();
+
         },
         icon: const Icon(Icons.logout,color: Colors.white,),
       ),
